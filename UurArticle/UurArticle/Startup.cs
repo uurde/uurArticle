@@ -1,14 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Business.Abstract;
+using Business.Business;
+using DataAccess.Abstracts;
+using DataAccess.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace UurArticle
 {
@@ -24,6 +22,24 @@ namespace UurArticle
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
+            #region Dependencies
+
+            //Article
+            services.AddScoped<IArticleBusiness, ArticleBusiness>();
+            services.AddScoped<IBlogArticleDal, BlogArticleDal>();
+
+            //Category
+            services.AddScoped<ICategoryBusiness, CategoryBusiness>();
+            services.AddScoped<IBlogCategoryDal, BlogCategoryDal>();
+
+            //User
+            services.AddScoped<IUserBusiness, UserBusiness>();
+            services.AddScoped<IBlogUserDal, BlogUserDal>();
+
+            #endregion
+
             services.AddControllers();
         }
 
@@ -34,6 +50,8 @@ namespace UurArticle
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials());
 
             app.UseRouting();
 

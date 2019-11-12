@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "b05dbab8-e2e2-456b-8f35-92738cf53782",
+		"name": "Article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\": \"uurde\",\n\t\"userPassword\": \"3\",\n\t\"firstName\": \"Uğur\",\n\t\"lastName\": \"Değirmenci\"\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/users",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:65242/users",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\" : 3,\n\t\"userName\": \"uurde\",\n\t\"userPassword\": \"3\",\n\t\"firstName\": \"Mustafa\",\n\t\"lastName\": \"Değirmenci\"\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/users",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userId\" : 2,\n\t\"userName\": \"uurde\",\n\t\"userPassword\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:65242/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryName\": \"sistem\",\n\t\"description\": \"sistem hakkında\",\n\t\"creUser\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryId\": 2,\n\t\"categoryName\": \"database\",\n\t\"description\": \"database hakkında\",\n\t\"creUser\": 1,\n\t\"modUser\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Categories",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"categoryId\": 2\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/categories/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"categories",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:65242/articles/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"articles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Deneme2\",\n\t\"shortDescription\": \"Deneme2 kaydı hakkında\",\n\t\"body\": \"postman ile deneme2 kaydı post etme\",\n\t\"categoryId\": 1,\n\t\"creUser\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/articles/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"articles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"articleId\": 1,\n    \"title\": \"Deneme\",\n    \"shortDescription\": \"Deneme kaydı hakkında\",\n    \"body\": \"postman ile deneme kaydı post etme\",\n    \"categoryId\": 1,\n    \"creUser\": 1,\n    \"modUser\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/articles/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"articles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetArticles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:65242/articles/GetArticles",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"articles",
+						"GetArticles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Articles",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"articleId\": 2\n}"
+				},
+				"url": {
+					"raw": "localhost:65242/articles/",
+					"host": [
+						"localhost"
+					],
+					"port": "65242",
+					"path": [
+						"articles",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -31,7 +31,7 @@ namespace UurArticle.Controllers
             }
         }
 
-        [HttpGet("{articleId}")]
+        [HttpGet("{categoryId}")]
         public IActionResult Get(int categoryId)
         {
             try

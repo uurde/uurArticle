@@ -13,8 +13,8 @@ namespace DataAccess.DataAccess
         {
             using (Context context = new Context())
             {
-                var article = from a in context.BlogArticles
-                               join c in context.BlogCategories
+                var article = from a in context.BlogArticle
+                               join c in context.BlogCategory
                                on a.CategoryId equals c.CategoryId
                                where a.ArticleId == articleId
                                select new ArticleModel
@@ -40,8 +40,8 @@ namespace DataAccess.DataAccess
         {
             using(Context context = new Context())
             {
-                var articles = from a in context.BlogArticles
-                             join c in context.BlogCategories
+                var articles = from a in context.BlogArticle
+                             join c in context.BlogCategory
                              on a.CategoryId equals c.CategoryId
                              select new ArticleModel
                              {

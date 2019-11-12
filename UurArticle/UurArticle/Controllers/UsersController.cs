@@ -31,7 +31,7 @@ namespace UurArticle.Controllers
             }
         }
 
-        [HttpGet("{articleId}")]
+        [HttpGet("{userId}")]
         public IActionResult Get(int userId)
         {
             try
@@ -93,7 +93,7 @@ namespace UurArticle.Controllers
             }
         }
 
-        [HttpDelete("MarkAsDeleted/{categoryId}")]
+        [HttpDelete("MarkAsDeleted/{userId}")]
         public IActionResult MarkAsDeleted(int userId)
         {
             try
